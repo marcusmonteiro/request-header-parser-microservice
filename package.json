@@ -4,7 +4,11 @@
   "description": "Request Header Parser Microservice project from FreeCodeCamp",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "lint": "standard | snazzy",
+    "test": "test",
+    "build": "webpack",
+    "start:dev": "nodemon --exec npm run babel-node -- ./src/index.js",
+    "start": "node ./build/main.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +25,18 @@
   "bugs": {
     "url": "https://github.com/marcusmonteiro/request-header-parser-microservice/issues"
   },
-  "homepage": "https://github.com/marcusmonteiro/request-header-parser-microservice#readme"
+  "homepage": "https://github.com/marcusmonteiro/request-header-parser-microservice#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-latest": "^6.16.0",
+    "json-loader": "^0.5.4",
+    "snazzy": "^5.0.0",
+    "standard": "^8.5.0",
+    "webpack": "^1.13.3",
+    "webpack-node-externals": "^1.5.4"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
