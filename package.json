@@ -7,6 +7,7 @@
     "lint": "standard | snazzy",
     "test": "test",
     "build": "webpack",
+     "babel-node": "babel-node",
     "start:dev": "nodemon --exec npm run babel-node -- ./src/index.js",
     "start": "node ./build/main.js"
   },
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/marcusmonteiro/request-header-parser-microservice#readme",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
     "babel-preset-latest": "^6.16.0",
