@@ -1,0 +1,25 @@
+{
+  "name": "request-header-parser-microservice",
+  "version": "1.0.0",
+  "description": "Request Header Parser Microservice project from FreeCodeCamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcusmonteiro/request-header-parser-microservice.git"
+  },
+  "keywords": [
+    "microservice",
+    "node",
+    "express",
+    "freecodecamp"
+  ],
+  "author": "Marcus Vinicius Monteiro de Souza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcusmonteiro/request-header-parser-microservice/issues"
+  },
+  "homepage": "https://github.com/marcusmonteiro/request-header-parser-microservice#readme"
+}
