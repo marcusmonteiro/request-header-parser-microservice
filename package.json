@@ -7,7 +7,7 @@
     "lint": "standard | snazzy",
     "test": "test",
     "build": "webpack",
-     "babel-node": "babel-node",
+    "babel-node": "babel-node",
     "start:dev": "nodemon --exec npm run babel-node -- ./src/index.js",
     "start": "node ./build/main.js"
   },
