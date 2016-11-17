@@ -10,7 +10,7 @@
     "build": "webpack",
     "babel-node": "babel-node",
     "start:dev": "nodemon --exec npm run babel-node -- ./src/index.js",
-    "start": "node ./build/main.js"
+    "start": "npm run build && node ./build/main.js"
   },
   "repository": {
     "type": "git",
