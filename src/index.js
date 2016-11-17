@@ -1,20 +1,22 @@
 import express from 'express'
-import uaParser from 'ua-parser-js'
+import fs from 'fs'
+import dotenv from 'dotenv'
+import requestHeaderParser from './request-header-parser'
+
+try {
+  fs.accessSync('.env', fs.F_OK)
+  dotenv.load({ path: '.env' })
+} catch (err) {
+}
 
 const app = express()
 
-app.get('*', (req, res) => {
-  const parsedUA = uaParser(req.headers['user-agent'])
-  const software = `${parsedUA.os.name} ${parsedUA.os.version}`
+app.set('port', process.env.PORT || 3000)
 
-  res.json({
-    "ipaddress": req.ip,
-    "language": req.acceptsLanguages()[0],
-    "software": software
-  })
+app.get('*', requestHeaderParser)
+
+app.listen(app.get('port'), () => {
+  console.log(`Server listening on port ${app.get('port')}`)
 })
 
-const port = 3000
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`)
-})
+export default app
