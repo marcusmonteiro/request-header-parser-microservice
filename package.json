@@ -4,7 +4,7 @@
   "description": "Request Header Parser Microservice project from FreeCodeCamp",
   "main": "index.js",
   "scripts": {
-    "lint": "standard | snazzy",
+    "lint": "standard --fix | snazzy",
     "test:unit": "mocha \"src/**/*.test.js\" --require babel-register",
     "test": "npm run lint && npm run test:unit",
     "build": "webpack",
@@ -37,6 +37,7 @@
     "chance": "^1.0.4",
     "json-loader": "^0.5.4",
     "mocha": "^3.1.2",
+    "nodemon": "^1.11.0",
     "snazzy": "^5.0.0",
     "standard": "^8.5.0",
     "supertest": "^2.0.1",
@@ -44,7 +45,6 @@
     "webpack-node-externals": "^1.5.4"
   },
   "dependencies": {
-    "dotenv": "^2.0.0",
     "express": "^4.14.0"
   }
 }
