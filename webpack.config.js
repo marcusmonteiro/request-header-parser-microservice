@@ -1,15 +1,22 @@
 var webpack = require('webpack')
+var path = require('path')
 var nodeExternals = require('webpack-node-externals')
+var CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   bail: true,
-  entry: './src/index.js',
+  context: path.join(__dirname, 'src'),
+  entry: './index.js',
   devtool: 'source-map',
   output: {
-    path: 'build',
-    filename: '[name].js'
+    path: path.join(__dirname, 'build'),
+    filename: 'index.js',
+    publicPath: '/'
   },
   target: 'node',
+  node: {
+    __dirname: false
+  },
   externals: [nodeExternals()],
   module: {
     loaders: [
@@ -44,6 +51,12 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: 'public',
+        to: 'public'
+      }
+    ])
   ]
 }

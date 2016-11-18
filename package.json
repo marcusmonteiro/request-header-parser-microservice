@@ -10,7 +10,7 @@
     "build": "webpack",
     "babel-node": "babel-node",
     "start:dev": "nodemon --exec npm run babel-node -- ./src/index.js",
-    "start": "npm run build && node ./build/main.js"
+    "start": "npm run build && node ./build/index.js"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "babel-preset-latest": "^6.16.0",
     "chai": "^3.5.0",
     "chance": "^1.0.4",
+    "copy-webpack-plugin": "^4.0.1",
     "json-loader": "^0.5.4",
     "mocha": "^3.1.2",
     "nodemon": "^1.11.0",
@@ -49,7 +50,9 @@
     "webpack-node-externals": "^1.5.4"
   },
   "dependencies": {
+    "cors": "^2.8.1",
     "express": "^4.14.0",
+    "pug": "^2.0.0-beta6",
     "ua-parser-js": "^0.7.12"
   }
 }
