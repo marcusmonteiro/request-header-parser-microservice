@@ -22,7 +22,11 @@
     "express",
     "freecodecamp"
   ],
-  "author": "Marcus Vinicius Monteiro de Souza",
+  "author": {
+    "name": "Marcus Vinicius Monteiro de Souza",
+    "email": "mvsouza007@gmail.com",
+    "url": "https://marcusmonteiro.github.io"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/marcusmonteiro/request-header-parser-microservice/issues"
