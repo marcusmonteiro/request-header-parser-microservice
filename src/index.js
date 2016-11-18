@@ -1,5 +1,5 @@
 import express from 'express'
-import requestHeaderParser from './request-header-parser'
+import { requestHeaderParser } from './api'
 
 const app = express()
 

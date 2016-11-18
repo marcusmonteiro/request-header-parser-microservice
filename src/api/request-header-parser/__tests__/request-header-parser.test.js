@@ -3,7 +3,7 @@
 import { expect } from 'chai'
 import request from 'supertest'
 import Chance from 'chance'
-import app from '../../'
+import app from '../../..'
 
 describe('request header parser', () => {
   it(`should return the request header's ip address, language, and operating system when requesting any URI`, () => {

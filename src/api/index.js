@@ -1,12 +1,5 @@
-import uaParser from 'ua-parser-js'
+import requestHeaderParser from './request-header-parser'
 
-export default function parseRequestHeader (req, res) {
-  const parsedUA = uaParser(req.headers['user-agent'])
-  const software = `${parsedUA.os.name} ${parsedUA.os.version}`
-
-  res.json({
-    'ipaddress': req.ip,
-    'language': req.acceptsLanguages()[0],
-    'software': software
-  })
+export {
+  requestHeaderParser
 }
